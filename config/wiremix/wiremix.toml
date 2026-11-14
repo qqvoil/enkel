@@ -1,0 +1,71 @@
+# Wiremix configuration with Russian layout support
+
+keybindings = [
+  # --- Russian Layout Adaptations (JCUKEN) ---
+  # Exit: 'й' / 'Й' (q / Q)
+  { key = { Char = "й" }, action = "Exit" },
+  { key = { Char = "Й" }, action = "Exit" },
+  { key = { Char = "Й" }, modifiers = "SHIFT", action = "Exit" },
+
+  # Toggle Mute: 'ь' / 'Ь' (m / M)
+  { key = { Char = "ь" }, action = "ToggleMute" },
+  { key = { Char = "Ь" }, action = "ToggleMute" },
+  { key = { Char = "Ь" }, modifiers = "SHIFT", action = "ToggleMute" },
+
+  # Set Default Endpoint: 'в' / 'В' (d / D)
+  { key = { Char = "в" }, action = "SetDefault" },
+  { key = { Char = "В" }, action = "SetDefault" },
+  { key = { Char = "В" }, modifiers = "SHIFT", action = "SetDefault" },
+
+  # Activate / Select Dropdown: 'с' / 'С' (c / C)
+  { key = { Char = "с" }, action = "ActivateDropdown" },
+  { key = { Char = "С" }, action = "ActivateDropdown" },
+  { key = { Char = "С" }, modifiers = "SHIFT", action = "ActivateDropdown" },
+
+  # Navigation - Down: 'о' / 'О' (j / J)
+  { key = { Char = "о" }, action = "MoveDown" },
+  { key = { Char = "О" }, action = "MoveDown" },
+  { key = { Char = "О" }, modifiers = "SHIFT", action = "MoveDown" },
+
+  # Navigation - Up: 'л' / 'Л' (k / K)
+  { key = { Char = "л" }, action = "MoveUp" },
+  { key = { Char = "Л" }, action = "MoveUp" },
+  { key = { Char = "Л" }, modifiers = "SHIFT", action = "MoveUp" },
+
+  # Volume Down (-1%): 'р' (h)
+  { key = { Char = "р" }, action = { SetRelativeVolume = -0.01 } },
+
+  # Volume Up (+1%): 'д' (l)
+  { key = { Char = "д" }, action = { SetRelativeVolume = 0.01 } },
+
+  # Switch Tabs - Left: 'Р' (H / Shift+h), 'х' ([), '['
+  { key = { Char = "Р" }, action = "TabLeft" },
+  { key = { Char = "Р" }, modifiers = "SHIFT", action = "TabLeft" },
+  { key = { Char = "р" }, modifiers = "SHIFT", action = "TabLeft" },
+  { key = { Char = "х" }, action = "TabLeft" },
+  { key = { Char = "Х" }, action = "TabLeft" },
+  { key = { Char = "Х" }, modifiers = "SHIFT", action = "TabLeft" },
+  { key = { Char = "[" }, action = "TabLeft" },
+  { key = { Char = "H" }, modifiers = "SHIFT", action = "TabLeft" },
+  { key = { Char = "h" }, modifiers = "SHIFT", action = "TabLeft" },
+
+  # Switch Tabs - Right: 'Д' (L / Shift+l), 'ъ' (]), ']'
+  { key = { Char = "Д" }, action = "TabRight" },
+  { key = { Char = "Д" }, modifiers = "SHIFT", action = "TabRight" },
+  { key = { Char = "д" }, modifiers = "SHIFT", action = "TabRight" },
+  { key = { Char = "ъ" }, action = "TabRight" },
+  { key = { Char = "Ъ" }, action = "TabRight" },
+  { key = { Char = "Ъ" }, modifiers = "SHIFT", action = "TabRight" },
+  { key = { Char = "]" }, action = "TabRight" },
+  { key = { Char = "L" }, modifiers = "SHIFT", action = "TabRight" },
+  { key = { Char = "l" }, modifiers = "SHIFT", action = "TabRight" },
+
+  # Mute / 0% Volume: 'ё' / 'Ё' (`)
+  { key = { Char = "ё" }, action = { SetAbsoluteVolume = 0.00 } },
+  { key = { Char = "Ё" }, action = { SetAbsoluteVolume = 0.00 } },
+  { key = { Char = "Ё" }, modifiers = "SHIFT", action = { SetAbsoluteVolume = 0.00 } },
+
+  # Help: ',' (Shift+? on Russian keyboard layout)
+  { key = { Char = "," }, action = "Help" },
+  { key = { Char = "," }, modifiers = "SHIFT", action = "Help" },
+]

@@ -1,0 +1,62 @@
+<!DOCTYPE patchbay>
+<patchbay name="ЙЦУК" version="1.0.3">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FL"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FL"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Zen" port="Zen:output_FR"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FR"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Virtual Mic" port="Virtual Mic:capture_FL"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla" port="Carla:output_FL"/>
+   <input node="Virtual Mic" port="Virtual Mic:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Virtual Mic" port="Virtual Mic:capture_FR"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-video">
+   <output node=".xdg-desktop-portal-hyprland-wrapped" port=".xdg-desktop-portal-hyprland-wrapped:capture_1"/>
+   <input node=".Discord-wrapped" port=".Discord-wrapped:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FL"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="FIFINE Microphone Mono" port="FIFINE Microphone:capture_MONO"/>
+   <input node="Carla" port="Carla:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FR"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Zen" port="Zen:output_FL"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla" port="Carla:output_FR"/>
+   <input node="Virtual Mic" port="Virtual Mic:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FR"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FR"/>
+  </item>
+ </items>
+</patchbay>
+

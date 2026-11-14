@@ -1,0 +1,75 @@
+/**
+ * ==========================================================
+ * STUDIO APPLE CAPSULE (Perfect Vertical Centering & Color)
+ * Waybar #656977 Network Accent · Pure Studio Typography
+ * ==========================================================
+ */
+
+configuration {
+    modi:                       "drun,run,window,combi";
+    combi-modi:                 "drun,run";
+    show-icons:                 false;
+    display-drun:               ">";
+    display-run:                ">";
+    display-window:             ">";
+    display-combi:              ">";
+    drun-display-format:        "{name}";
+    drun-match-fields:          "name,generic,keywords";
+    font:                       "Geist 12";
+}
+
+* {
+    bg-win:                     #f6f0ed;
+    border-col:                 rgba(0, 0, 0, 0.10);
+    fg-main:                    #181920;
+    fg-muted:                   #656977;
+
+    background-color:           transparent;
+    text-color:                 @fg-main;
+    margin:                     0;
+    padding:                    0;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    width:                      400px;
+    x-offset:                   0px;
+    y-offset:                   -10%;
+
+    background-color:           @bg-win;
+    border:                     1px;
+    border-color:               @border-col;
+    border-radius:              14px;
+    padding:                    11px 18px;
+}
+
+mainbox {
+    spacing:                    0px;
+    background-color:           transparent;
+    children:                   [ "inputbar" ];
+}
+
+inputbar {
+    spacing:                    10px;
+    background-color:           transparent;
+    text-color:                 @fg-main;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    font:                       "Geist SemiBold 13";
+    text-color:                 @fg-muted;
+    vertical-align:             0.5;
+}
+
+entry {
+    font:                       "Geist 12";
+    text-color:                 @fg-main;
+    cursor-color:               #656977;
+    cursor-width:               2px;
+    placeholder:                "";
+    vertical-align:             0.5;
+    cursor:                     text;
+}

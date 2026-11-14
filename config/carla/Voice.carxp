@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Calf Compressor -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Compressor</Name>
+   <URI>http://calf.sourceforge.net/plugins/Compressor</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input</Name>
+    <Symbol>level_in</Symbol>
+    <Value>47.5312957763672</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.692626953125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>0.00999999977648258</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>250</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Makeup Gain</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Knee</Name>
+    <Symbol>knee</Symbol>
+    <Value>2.53808903694153</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Stereo Link</Name>
+    <Symbol>stereo_link</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Mix</Name>
+    <Symbol>mix</Symbol>
+    <Value>0.769318163394928</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Deesser -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Deesser</Name>
+   <URI>http://calf.sourceforge.net/plugins/Deesser</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Laxity</Name>
+    <Symbol>laxity</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Makeup</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Split</Name>
+    <Symbol>f1_freq</Symbol>
+    <Value>6000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Peak</Name>
+    <Symbol>f2_freq</Symbol>
+    <Value>7811.79541015625</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Gain</Name>
+    <Symbol>f1_level</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Level</Name>
+    <Symbol>f2_level</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Peak Q</Name>
+    <Symbol>f2_q</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>S/C-Listen</Name>
+    <Symbol>sc_listen</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Mono) -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>Audio Gain (Mono)</Name>
+   <Label>audiogain</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Gain</Name>
+    <Value>0.967587053775787</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <Plugin>
+  <Info>
+   <Type>JSFX</Type>
+   <Name>RBJ 12-Band EQ w/HPF</Name>
+   <Filename>/home/voil/.config/REAPER/Effects/Teej/rbj12eq-teej</Filename>
+   <Label>Teej/rbj12eq-teej</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1fc</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>HPF (dB)</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Low Shelf (dB)</Name>
+    <Value>-12</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>80 Hz (dB)</Name>
+    <Value>-6.38175249099731</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>150 Hz (dB)</Name>
+    <Value>-4.40816307067871</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>250 Hz (dB)</Name>
+    <Value>-2.87034821510315</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>400 Hz (dB)</Name>
+    <Value>-2.31212496757507</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>630 Hz (dB)</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>800 Hz (dB)</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>1.6 kHz (dB)</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>3 kHz (dB)</Name>
+    <Value>-4.37935161590576</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>5 kHz (dB)</Name>
+    <Value>-1.15606248378754</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>7 kHz (dB)</Name>
+    <Value>-1.0876350402832</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>10 kHz (dB)</Name>
+    <Value>-1.72869145870209</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>12 kHz (dB)</Name>
+    <Value>-3.76710677146912</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>LPF (dB)</Name>
+    <Value>22000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Output Gain (dB)</Name>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>E2x2 Analog Surround 2.1:capture_FL</Source>
+   <Target>Calf Deesser:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>E2x2 Analog Surround 2.1:capture_FL</Source>
+   <Target>Calf Deesser:In R</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Deesser:Out L</Source>
+   <Target>Audio Gain (Mono):input</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Deesser:Out R</Source>
+   <Target>Audio Gain (Mono):input</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Gain (Mono):output</Source>
+   <Target>RBJ 12-Band EQ w/HPF:left input</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Gain (Mono):output</Source>
+   <Target>RBJ 12-Band EQ w/HPF:right input</Target>
+  </Connection>
+  <Connection>
+   <Source>RBJ 12-Band EQ w/HPF:left input (2)</Source>
+   <Target>Calf Compressor:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>RBJ 12-Band EQ w/HPF:right input (2)</Source>
+   <Target>Calf Compressor:In R</Target>
+  </Connection>
+  <Connection>
+   <Source>Zen:output_FL-1495</Source>
+   <Target>E2x2 Analog Surround 2.1:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Zen:output_FR-1496</Source>
+   <Target>E2x2 Analog Surround 2.1:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Zen:output_LFE-1497</Source>
+   <Target>E2x2 Analog Surround 2.1:playback_LFE</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

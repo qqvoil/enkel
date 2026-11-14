@@ -1,0 +1,83 @@
+/**
+ * STUDIO APPLE CAPSULE - Single-line Clipboard Capsule
+ * Matches config.rasi 1:1
+ */
+
+configuration {
+    show-icons:                 false;
+    font:                       "Geist 12";
+}
+
+* {
+    bg-win:                     #f6f0ed;
+    border-col:                 rgba(0, 0, 0, 0.10);
+    fg-main:                    #181920;
+    fg-muted:                   #656977;
+
+    background-color:           transparent;
+    text-color:                 @fg-main;
+    margin:                     0;
+    padding:                    0;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    width:                      400px;
+    x-offset:                   0px;
+    y-offset:                   -10%;
+
+    background-color:           @bg-win;
+    border:                     1px;
+    border-color:               @border-col;
+    border-radius:              14px;
+    padding:                    11px 18px;
+}
+
+mainbox {
+    spacing:                    0px;
+    background-color:           transparent;
+    children:                   [ "listview" ];
+}
+
+listview {
+    enabled:                    true;
+    columns:                    1;
+    lines:                      1;
+    cycle:                      true;
+    dynamic:                    false;
+    scrollbar:                  false;
+    layout:                     vertical;
+    fixed-height:               true;
+    fixed-columns:              true;
+    spacing:                    0px;
+    margin:                     0px;
+    padding:                    0px;
+    background-color:           transparent;
+}
+
+element {
+    enabled:                    true;
+    padding:                    0px;
+    border-radius:              0px;
+    background-color:           transparent;
+    text-color:                 @fg-main;
+    cursor:                     pointer;
+    children:                   [ "element-text" ];
+}
+
+element selected.normal {
+    background-color:           transparent;
+    text-color:                 @fg-main;
+}
+
+element-text {
+    font:                       "Geist 12";
+    background-color:           transparent;
+    text-color:                 inherit;
+    highlight:                  inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+}

@@ -1,0 +1,32 @@
+/* Minimalist Studio Dark Monochrome for GTK4 & Libadwaita */
+@define-color accent_color #cccccc;
+@define-color accent_bg_color #282828;
+@define-color accent_fg_color #ffffff;
+@define-color destructive_color #c84646;
+@define-color destructive_bg_color #3d1c1c;
+@define-color destructive_fg_color #ffffff;
+@define-color window_bg_color #141414;
+@define-color window_fg_color #d6d6d6;
+@define-color view_bg_color #111111;
+@define-color view_fg_color #d6d6d6;
+@define-color headerbar_bg_color #141414;
+@define-color headerbar_fg_color #d6d6d6;
+@define-color headerbar_border_color #222329;
+@define-color headerbar_backdrop_color #141414;
+@define-color card_bg_color #1a1a1a;
+@define-color card_fg_color #d6d6d6;
+@define-color card_border_color #222329;
+@define-color popover_bg_color #181920;
+@define-color popover_fg_color #d6d6d6;
+@define-color dialog_bg_color #141414;
+@define-color dialog_fg_color #d6d6d6;
+
+scrollbar slider {
+    background-color: #333333;
+    border-radius: 4px;
+    min-width: 6px;
+    min-height: 6px;
+}
+scrollbar slider:hover {
+    background-color: #555555;
+}

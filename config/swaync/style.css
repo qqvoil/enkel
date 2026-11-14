@@ -1,0 +1,312 @@
+/* ==========================================================
+ * SwayNC Solid Matte Apple-Squircle Theme (Exact Rofi Match)
+ * Palette: Solid #f6f0ed / Border rgba(0, 0, 0, 0.10) / Text #181920
+ * ========================================================== */
+
+* {
+    font-family: "Geist", "Inter", sans-serif;
+    font-weight: 500;
+    outline: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+/* Base Window Backgrounds */
+.control-center {
+    background: #f6f0ed;
+    background-color: #f6f0ed;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    box-shadow: none;
+    color: #181920;
+    padding: 14px 16px;
+}
+
+/* ==========================================================
+ * Floating Notification Popups & Hover Fixes
+ * ========================================================== */
+
+.notification-row,
+.notification-row:hover,
+.notification-row:focus,
+.notification-row:active,
+.notification-background,
+.notification-background:hover,
+.notification-background:focus,
+.notification-background:active,
+.notification-content,
+.notification-content:hover,
+.notification-content:focus,
+.notification-content:active,
+.notification-default-action,
+.notification-default-action:hover,
+.notification-default-action:focus,
+.notification-default-action:active {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+}
+
+.notification,
+.notification:hover,
+.notification:focus,
+.notification:active {
+    background: #f6f0ed;
+    background-color: #f6f0ed;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    box-shadow: none;
+    color: #181920;
+    padding: 12px 18px;
+    margin: 6px;
+    transition: none;
+}
+
+/* Notification Media / Avatar */
+.notification image,
+.notification .image,
+.notification-content image,
+.notification-content .image {
+    border-radius: 24px;
+    margin-right: 12px;
+}
+
+/* Lock Typography Colors */
+.summary,
+.notification:hover .summary,
+.notification-row:hover .summary {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #181920;
+}
+
+.body,
+.notification:hover .body,
+.notification-row:hover .body {
+    font-size: 12px;
+    font-weight: 400;
+    color: #4a4d58;
+    margin-top: 3px;
+}
+
+.time,
+.notification:hover .time,
+.notification-row:hover .time {
+    font-size: 11px;
+    color: #656977;
+    margin-right: 6px;
+}
+
+.app-name,
+.notification:hover .app-name,
+.notification-row:hover .app-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #656977;
+}
+
+/* Close Button */
+.close-button {
+    background: transparent;
+    background-color: transparent;
+    border-radius: 20px;
+    color: #656977;
+    padding: 4px;
+    border: none;
+    box-shadow: none;
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.06);
+    background-color: rgba(0, 0, 0, 0.06);
+    color: #181920;
+}
+
+/* ==========================================================
+ * Action Buttons (Telegram "Mark as read", etc.)
+ * ========================================================== */
+
+.notification-action-buttons,
+.notification-actions,
+.notification-action {
+    background: transparent;
+    background-color: transparent;
+    margin-top: 8px;
+    spacing: 6px;
+}
+
+.notification-action-buttons button,
+.notification-actions button,
+.notification-action button,
+button.notification-action,
+.notification button.notification-action,
+.notification button {
+    background: #ebe5e1;
+    background-color: #ebe5e1;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    color: #181920;
+    font-size: 11.5px;
+    font-weight: 500;
+    padding: 5px 14px;
+    margin: 4px 3px;
+    box-shadow: none;
+}
+
+.notification-action-buttons button label,
+.notification-actions button label,
+.notification-action button label,
+button.notification-action label,
+.notification button label {
+    color: #181920;
+}
+
+.notification-action-buttons button:hover,
+.notification-actions button:hover,
+.notification-action button:hover,
+button.notification-action:hover,
+.notification button.notification-action:hover,
+.notification button:hover {
+    background: #656977;
+    background-color: #656977;
+    border-color: #656977;
+    color: #f6f0ed;
+}
+
+.notification-action-buttons button:hover label,
+.notification-actions button:hover label,
+.notification-action button:hover label,
+button.notification-action:hover label,
+.notification button:hover label {
+    color: #f6f0ed;
+}
+
+/* ==========================================================
+ * Control Center Widgets
+ * ========================================================== */
+
+/* Widget: Title Header */
+.widget-title {
+    color: #181920;
+    margin: 4px 8px 12px 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.widget-title > button {
+    font-size: 12px;
+    font-weight: 500;
+    color: #656977;
+    background: #ebe5e1;
+    background-color: #ebe5e1;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 4px 12px;
+}
+
+.widget-title > button:hover {
+    background: #656977;
+    background-color: #656977;
+    color: #f6f0ed;
+}
+
+/* Widget: MPRIS Player */
+.widget-mpris {
+    background: #ebe5e1;
+    background-color: #ebe5e1;
+    border-radius: 14px;
+    margin: 6px 4px 12px 4px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: #181920;
+}
+
+.widget-mpris-player {
+    padding: 4px;
+}
+
+.widget-mpris-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #181920;
+}
+
+.widget-mpris-subtitle {
+    font-size: 12px;
+    color: #656977;
+    margin-top: 2px;
+}
+
+/* MPRIS Controls */
+.widget-mpris button {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    color: #656977;
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.widget-mpris button:hover {
+    background: rgba(0, 0, 0, 0.06);
+    background-color: rgba(0, 0, 0, 0.06);
+    color: #181920;
+}
+
+/* Widget: Do Not Disturb */
+.widget-dnd {
+    background: #ebe5e1;
+    background-color: #ebe5e1;
+    border-radius: 12px;
+    margin: 6px 4px;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: #181920;
+    font-size: 13px;
+}
+
+.widget-dnd > switch {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.widget-dnd > switch:checked {
+    background: #656977;
+    background-color: #656977;
+}
+
+.widget-dnd > switch slider {
+    background: #ffffff;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Notification List in Control Center */
+.control-center .notification-row {
+    background: transparent;
+    background-color: transparent;
+}
+
+.control-center .notification-row:hover,
+.control-center .notification-row:focus {
+    opacity: 1;
+    background: transparent;
+    background-color: transparent;
+}
+
+.control-center .notification {
+    background: #ebe5e1;
+    background-color: #ebe5e1;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin: 4px;
+}
+
+.control-center .notification:hover {
+    background: #e4ddd8;
+    background-color: #e4ddd8;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,110 @@
+# Russian (ЙЦУКЕН) keybindings for Yazi
+
+[mgr]
+prepend_keymap = [
+	# Навигация (h, j, k, l -> р, о, л, д)
+	{ on = "р", run = "leave",      desc = "Назад в родительскую директорию" },
+	{ on = "д", run = "enter",      desc = "Войти в директорию" },
+	{ on = "о", run = "arrow next", desc = "Следующий файл" },
+	{ on = "л", run = "arrow prev", desc = "Предыдущий файл" },
+
+	# Быстрый переход по списку
+	{ on = [ "п", "п" ], run = "arrow top", desc = "В начало списка" },
+	{ on = "П",          run = "arrow bot", desc = "В конец списка" },
+
+	# История переходов
+	{ on = "Р", run = "back",    desc = "Назад по истории" },
+	{ on = "Д", run = "forward", desc = "Вперед по истории" },
+
+	# Скролл превью (Shift+J / Shift+K -> О / Л)
+	{ on = "О", run = "seek 5",  desc = "Прокрутить превью вниз" },
+	{ on = "Л", run = "seek -5", desc = "Прокрутить превью вверх" },
+
+	# Выход
+	{ on = "й", run = "quit",               desc = "Выйти из Yazi" },
+	{ on = "Й", run = "quit --no-cwd-file", desc = "Выйти без сохранения cwd" },
+
+	# Открытие файлов
+	{ on = "щ", run = "open",               desc = "Открыть файл" },
+	{ on = "Щ", run = "open --interactive", desc = "Открыть с помощью..." },
+
+	# Копирование / Вырезание / Вставка
+	{ on = "н", run = "yank",                 desc = "Скопировать" },
+	{ on = "Н", run = "unyank",               desc = "Отменить копирование" },
+	{ on = "ч", run = "yank --cut",           desc = "Вырезать" },
+	{ on = "Ч", run = "unyank",               desc = "Отменить вырезание" },
+	{ on = "з", run = "paste",                desc = "Вставить" },
+	{ on = "З", run = "paste --force",        desc = "Вставить с перезаписью" },
+
+	# Удаление
+	{ on = "в", run = "remove",               desc = "В корзину" },
+	{ on = "В", run = "remove --permanently", desc = "Удалить навсегда" },
+
+	# Создание и переименование
+	{ on = "ф", run = "create",                     desc = "Создать файл/папку" },
+	{ on = "Ф", run = "bulk_create",                desc = "Массовое создание" },
+	{ on = "к", run = "rename --cursor=before_ext", desc = "Переименовать" },
+
+	# Скрытые файлы (ю соответствует точке на русской раскладке)
+	{ on = "ю", run = "hidden toggle", desc = "Показать/скрыть скрытые файлы" },
+
+	# Визуальное выделение
+	{ on = "м", run = "visual_mode",         desc = "Режим выделения" },
+	{ on = "М", run = "visual_mode --unset", desc = "Снять выделение" },
+
+	# Поиск и фильтрация
+	{ on = "а", run = "filter --smart", desc = "Фильтровать файлы" },
+	{ on = "ы", run = "plugin fd",      desc = "Поиск файлов по имени (fd)" },
+	{ on = "Ы", run = "plugin rg",      desc = "Поиск по содержимому (rg)" },
+	{ on = "я", run = "plugin fzf",     desc = "Прыжок через fzf" },
+	{ on = "Я", run = "plugin zoxide",  desc = "Прыжок через zoxide" },
+	{ on = "т", run = "find_arrow",            desc = "Следующее совпадение поиска" },
+	{ on = "Т", run = "find_arrow --previous", desc = "Предыдущее совпадение поиска" },
+
+	# Задачи и шелл
+	{ on = "ц", run = "tasks:show",                  desc = "Менеджер фоновых задач" },
+	{ on = "ж", run = "shell --interactive",         desc = "Выполнить команду shell" },
+	{ on = "Ж", run = "shell --block --interactive", desc = "Выполнить команду shell (с блокировкой)" },
+
+	# Быстрый переход по папкам (g h, g c, g d, g t)
+	{ on = [ "п", "р" ], run = "cd ~",         desc = "Домашняя папка" },
+	{ on = [ "п", "с" ], run = "cd ~/.config", desc = "Папка ~/.config" },
+	{ on = [ "п", "в" ], run = "cd ~/Downloads", desc = "Папка Загрузки" },
+	{ on = [ "п", "е" ], run = "plugin trash", desc = "Корзина" },
+
+	# Копирование путей (c c, c d, c f, c n)
+	{ on = [ "с", "с" ], run = "copy path",             desc = "Скопировать полный путь" },
+	{ on = [ "с", "в" ], run = "copy dirpath",          desc = "Скопировать путь к папке" },
+	{ on = [ "с", "ф" ], run = "copy filename",         desc = "Скопировать имя файла" },
+	{ on = [ "с", "т" ], run = "copy name_without_ext", desc = "Скопировать имя без расширения" },
+
+	# Вкладки (t t, [, ])
+	{ on = [ "е", "е" ], run = "tab_create --current",     desc = "Создать вкладку" },
+	{ on = "х",         run = "tab_switch -1 --relative", desc = "Предыдущая вкладка" },
+	{ on = "ъ",         run = "tab_switch 1 --relative",  desc = "Следующая вкладка" },
+	{ on = "Х",         run = "tab_swap -1",              desc = "Переместить вкладку влево" },
+	{ on = "Ъ",         run = "tab_swap 1",               desc = "Переместить вкладку вправо" },
+]
+
+[tasks]
+prepend_keymap = [
+	{ on = "й", run = "close",      desc = "Закрыть менеджер задач" },
+	{ on = "ц", run = "close",      desc = "Закрыть менеджер задач" },
+	{ on = "о", run = "arrow next", desc = "Следующая задача" },
+	{ on = "л", run = "arrow prev", desc = "Предыдущая задача" },
+	{ on = "в", run = "cancel",     desc = "Отменить задачу" },
+]
+
+[select]
+prepend_keymap = [
+	{ on = "й", run = "close",      desc = "Отмена" },
+	{ on = "о", run = "arrow next", desc = "Вниз" },
+	{ on = "л", run = "arrow prev", desc = "Вверх" },
+]
+
+[help]
+prepend_keymap = [
+	{ on = "й", run = "escape",     desc = "Закрыть справку" },
+	{ on = "о", run = "arrow next", desc = "Вниз" },
+	{ on = "л", run = "arrow prev", desc = "Вверх" },
+]

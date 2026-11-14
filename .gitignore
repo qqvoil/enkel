@@ -1,0 +1,20 @@
+# NixOS secrets and private keys
+**/secrets/
+**/secrets/*
+secrets/
+*.secret
+*.key
+
+# Nix build outputs
+result
+result-*
+
+# Editor and backup files
+*.bak
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Carla auto-generated caches if any
+**/CarlaPlugins5.conf

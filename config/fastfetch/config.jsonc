@@ -1,0 +1,77 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "/home/voil/.config/fastfetch/v_logo.txt",
+    "color": {
+      "1": "#d6d6d6"
+    },
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 4
+    }
+  },
+  "display": {
+    "separator": "  ·  ",
+    "color": {
+      "keys": "#8c909e",
+      "separator": "#656977"
+    },
+    "key": {
+      "type": "string"
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "#eeeeee",
+        "at": "#656977",
+        "host": "#8c909e"
+      }
+    },
+    "break",
+    {
+      "type": "separator",
+      "string": "─",
+      "outputColor": "#656977"
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "os "
+    },
+    {
+      "type": "wm",
+      "key": "wm "
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "cpu",
+      "format": "{1}"
+    },
+    {
+      "type": "gpu",
+      "key": "gpu",
+      "format": "{2}"
+    },
+    {
+      "type": "memory",
+      "key": "ram"
+    },
+    "break",
+    {
+      "type": "datetime",
+      "key": "now"
+    },
+    "break",
+    {
+      "type": "separator",
+      "string": "─",
+      "outputColor": "#656977"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[Unit]
+Description=Carla Headless Mic Processing
+After=pipewire.service
+Requires=pipewire.service
+
+[Service]
+Environment="PIPEWIRE_LATENCY=128/48000"
+Type=simple
+ExecStartPost=/home/voil/.local/bin/carla-mic-routing.sh
+ExecStart=/run/current-system/sw/bin/bash -l -c "/run/current-system/sw/bin/carla --no-gui %h/.config/carla/t732.carxp"
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,116 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "margin-top": 8,
+  "margin-left": 14,
+  "margin-right": 14,
+  "spacing": 0,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "mpris",
+    "network",
+    "group/tray-drawer",
+    "hyprland/language"
+  ],
+
+  /* ================= Modules Config ================= */
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "sort-by-number": true,
+    "active-only": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "01",
+      "2": "02",
+      "3": "03",
+      "4": "04",
+      "5": "05",
+      "6": "06",
+      "7": "07",
+      "8": "08",
+      "9": "09",
+      "10": "10",
+      "urgent": "!",
+      "default": "{name}"
+    },
+    "on-click": "activate"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%H:%M   ·   %d.%m.%Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#111215'><b>{}</b></span>",
+        "days": "<span color='#555866'><b>{}</b></span>",
+        "weeks": "<span color='#999da8'><b>w{}</b></span>",
+        "weekdays": "<span color='#777a88'><b>{}</b></span>",
+        "today": "<span color='#ffffff' background='#111215'><b>{}</b></span>"
+      }
+    }
+  },
+
+  "mpris": {
+    "format": "{title}   —   {artist}",
+    "format-paused": "{title}   —   {artist}",
+    "max-length": 45,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "tooltip-format": "{player} ({status}): {artist} — {title}"
+  },
+
+  "network": {
+    "interval": 2,
+    "format-wifi": "{bandwidthDownBytes}",
+    "format-ethernet": "↓ {bandwidthDownBytes}",
+    "format-linked": "Ethernet",
+    "format-disconnected": "Offline",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "group/tray-drawer": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 250,
+      "children-class": "tray-item",
+      "transition-left-to-right": false,
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/tray-arrow",
+      "tray"
+    ]
+  },
+
+  "custom/tray-arrow": {
+    "format": "󰅁",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 13,
+    "spacing": 8
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "on-click": "hyprctl switchxkblayout current next"
+  }
+}

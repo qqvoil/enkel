@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec steam-run /home/voil/Mindustry/Mindustry "$@"

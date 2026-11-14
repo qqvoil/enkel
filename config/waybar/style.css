@@ -1,0 +1,169 @@
+/* ==========================================================
+ * PURE MINIMALIST MONOCHROME (Zero Underlays)
+ * Clean Typography · Pure Data · Strict Monochrome
+ * ========================================================== */
+
+* {
+    font-family: "Geist", "Inter", "DejaVu Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #111215;
+}
+
+/* ================= Zero Containers ================= */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ================= Left: Workspaces ================= */
+
+#workspaces {
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    color: #8c909e;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 4px;
+    margin: 0 3px;
+    background: transparent;
+    border: none;
+    transition: all 0.12s ease;
+}
+
+#workspaces button:hover {
+    color: #111215;
+}
+
+/* Active Workspace */
+#workspaces button.active {
+    color: #111215;
+    font-weight: 800;
+}
+
+#workspaces button.urgent {
+    color: #111215;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+/* ================= Center: Clock ================= */
+
+#clock {
+    color: #111215;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 6px;
+}
+
+#clock:hover {
+    color: #000000;
+}
+
+/* ================= Right: Info ================= */
+
+#mpris,
+#network,
+#language,
+#tray-drawer,
+#tray {
+    margin: 0 8px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #656977;
+    transition: all 0.12s ease;
+}
+
+/* Music Player */
+#mpris {
+    color: #24262e;
+    font-weight: 500;
+}
+
+#mpris:hover {
+    color: #111215;
+}
+
+/* Network */
+#network:hover {
+    color: #111215;
+}
+
+/* Tray Arrow & Drawer */
+#custom-tray-arrow {
+    font-family: "Symbols Nerd Font", sans-serif;
+    color: #656977;
+    font-size: 14px;
+    padding: 0 4px;
+    margin: 0 2px;
+    transition: all 0.12s ease;
+}
+
+#custom-tray-arrow:hover {
+    color: #111215;
+}
+
+#tray {
+    padding: 0 2px;
+    margin-right: 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Language Toggle (Far Right) */
+#language {
+    color: #111215;
+    font-weight: 700;
+    margin-left: 6px;
+    margin-right: 3px;
+    padding: 0 4px;
+}
+
+#language:hover {
+    color: #555866;
+}
+
+/* Tooltip */
+tooltip {
+    background: #ffffff;
+    border: 1px solid #e0e2e8;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 6px 12px;
+}
+
+tooltip label {
+    color: #111215;
+    font-size: 11.5px;
+    font-family: monospace;
+}

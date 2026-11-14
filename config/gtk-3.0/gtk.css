@@ -1,0 +1,16 @@
+/* Minimalist Studio Dark Monochrome for GTK3 */
+@define-color theme_base_color #111111;
+@define-color theme_bg_color #141414;
+@define-color theme_fg_color #d6d6d6;
+@define-color theme_selected_bg_color #282828;
+@define-color theme_selected_fg_color #ffffff;
+
+scrollbar slider {
+    background-color: #333333;
+    border-radius: 4px;
+    min-width: 6px;
+    min-height: 6px;
+}
+scrollbar slider:hover {
+    background-color: #555555;
+}

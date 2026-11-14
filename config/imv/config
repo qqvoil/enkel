@@ -1,0 +1,10 @@
+# imv configuration
+
+[options]
+suppress_default_binds = false
+
+[binds]
+<space> = quit
+<Return> = quit
+<Escape> = quit
+q = quit
