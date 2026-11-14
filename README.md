@@ -66,12 +66,12 @@ Unified configuration repository for system configuration (NixOS) and desktop do
 │   │   └── packages.nix
 │   ├── configuration.nix
 │   ├── desktop.nix
+│   ├── dotfiles.nix        # Declarative user symlink management (systemd.tmpfiles)
 │   ├── flake.lock
 │   ├── flake.nix
 │   ├── greeter.nix
 │   ├── hardware-configuration.nix
 │   └── users.nix
-├── deploy.sh               # Idempotent symlink deployment script
 └── README.md
 ```
 
@@ -80,14 +80,15 @@ Unified configuration repository for system configuration (NixOS) and desktop do
 ## Installation & Deployment
 
 ### 1. Linking Dotfiles and NixOS Config
-To apply symlinks to `~/.config`, `~/.local/bin`, and `/etc/nixos`:
+All dotfiles and user scripts are managed natively and declaratively through NixOS using `systemd.tmpfiles.rules` defined in `nixos/dotfiles.nix`.
+
+No external deployment scripts are needed. To apply or update symlinks, simply rebuild the system:
 
 ```bash
-cd ~/dotfiles
-./deploy.sh
+sudo nixos-rebuild switch
 ```
 
-Existing configurations are safely backed up with `.backup` extensions before symlinking.
+Systemd will automatically verify, create, and maintain all symlinks in `~/.config/` and `~/.local/bin/`.
 
 ### 2. NixOS Secrets Setup (Fresh Install)
 Password hashes and sensitive keys are kept out of version control and `/nix/store`:

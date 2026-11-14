@@ -6,6 +6,7 @@
     ./users.nix
     ./desktop.nix
     ./greeter.nix
+    ./dotfiles.nix
     ./soft/packages.nix
     ./soft/custom/kernel.nix
     ./soft/custom/replay.nix
