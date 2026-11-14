@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DaVinci Resolve
+GenericName=Video Editor
+Comment=Professional video editing, color correction, visual effects and audio post-production
+Exec=/home/voil/.local/bin/start-davinci.sh
+Terminal=false
+Icon=DV_Resolve
+Categories=AudioVideo;Video;AudioVideoEditing;
+StartupNotify=true

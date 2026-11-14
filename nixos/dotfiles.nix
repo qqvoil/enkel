@@ -47,6 +47,13 @@ in
 
     # User systemd units
     "L+ ${homeDir}/.config/systemd/user/carla-mic.service - - - - ${repoDir}/config/systemd/user/carla-mic.service"
+
+    # User desktop applications and icons
+    "d ${homeDir}/.local/share 0755 ${user} users -"
+    "d ${homeDir}/.local/share/applications 0755 ${user} users -"
+    "d ${homeDir}/.local/share/icons 0755 ${user} users -"
+    "L+ ${homeDir}/.local/share/applications/davinci.desktop - - - - ${repoDir}/desktop/applications/davinci.desktop"
+    "L+ ${homeDir}/.local/share/icons/DV_Resolve.png - - - - ${repoDir}/desktop/icons/DV_Resolve.png"
   ]
   ++ (map linkConfig configDirs)
   ++ (map linkBin binScripts);

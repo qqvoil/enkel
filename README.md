@@ -54,6 +54,11 @@ Unified configuration repository for system configuration (NixOS) and desktop do
 │   ├── waybar/
 │   ├── wiremix/
 │   └── yazi/
+├── desktop/                # Desktop entries and application icons
+│   ├── applications/
+│   │   └── davinci.desktop
+│   └── icons/
+│       └── DV_Resolve.png
 ├── nixos/                  # Declarative NixOS configuration (Flake)
 │   ├── bin/                # Firmware and binary blobs (e.g. patched_edid.bin)
 │   ├── secrets/            # Unversioned secrets (ignored in git)
@@ -72,6 +77,7 @@ Unified configuration repository for system configuration (NixOS) and desktop do
 │   ├── greeter.nix
 │   ├── hardware-configuration.nix
 │   └── users.nix
+├── distrobox.ini           # Declarative Distrobox container specification
 └── README.md
 ```
 
@@ -88,7 +94,7 @@ No external deployment scripts are needed. To apply or update symlinks, simply r
 sudo nixos-rebuild switch
 ```
 
-Systemd will automatically verify, create, and maintain all symlinks in `~/.config/` and `~/.local/bin/`.
+Systemd will automatically verify, create, and maintain all symlinks in `~/.config/`, `~/.local/bin/`, and `~/.local/share/applications/`.
 
 ### 2. NixOS Secrets Setup (Fresh Install)
 Password hashes and sensitive keys are kept out of version control and `/nix/store`:
@@ -111,4 +117,14 @@ Or simply (since `/etc/nixos` is symlinked):
 
 ```bash
 sudo nixos-rebuild switch
+```
+
+### 4. DaVinci Resolve & Distrobox Restore
+DaVinci Resolve runs inside an Arch Linux container with NVIDIA GPU passthrough. The base image is backed up to NVMe (`/home/voil/disks/wdb/backups/davinci-arch.tar.zst`).
+
+To restore the container on a fresh install:
+
+```bash
+podman load -i /home/voil/disks/wdb/backups/davinci-arch.tar.zst
+distrobox assemble create --file ~/dotfiles/distrobox.ini
 ```
