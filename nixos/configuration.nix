@@ -162,6 +162,15 @@
   virtualisation.podman.enable = true;
   hardware.nvidia-container-toolkit.enable = true;
 
+  # AI & LLM Inference (Local daemon with CUDA acceleration)
+  services.ollama = {
+    enable = true;
+    package = pkgs.ollama-cuda;
+    environmentVariables = {
+      OLLAMA_KEEP_ALIVE = "10m";
+    };
+  };
+
   # Disks
   fileSystems."/home/voil/disks/wdb" = {
     device = "/dev/disk/by-label/wdb";
