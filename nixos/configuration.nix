@@ -168,6 +168,8 @@
     package = pkgs.ollama-cuda;
     environmentVariables = {
       OLLAMA_KEEP_ALIVE = "10m";
+      OLLAMA_KV_CACHE_TYPE = "q4_0";
+      OLLAMA_FLASH_ATTENTION = "1";
     };
   };
 
