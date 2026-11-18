@@ -101,7 +101,7 @@
     matchConfig.Name = "eno1";
     address = [ "192.168.3.27/24" ];
     routes = [ { Gateway = "192.168.3.1"; } ];
-    dns = [ "1.1.1.1" "8.8.8.8" ];
+    dns = [ "1.1.1.1" "9.9.9.9" ];
     linkConfig.RequiredForOnline = "routable";
     linkConfig.MTUBytes = "1500";
   };
