@@ -35,6 +35,7 @@
   programs.throne.tunMode.enable = true;
   
   environment.systemPackages = with pkgs; [
+    rensa
     kicad
     clang
     rustc

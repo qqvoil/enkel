@@ -20,9 +20,14 @@
       url = "github:Hy4ri/antigravity-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rensa = {
+      url = "github:qqvoil/rensa";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
   };
 
-  outputs = { self, nixpkgs, hyprland, waybar, zen-browser, antigravity, ... }: {
+  outputs = { self, nixpkgs, hyprland, waybar, zen-browser, antigravity, rensa, ... }: {
     nixosConfigurations.v-nix = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit hyprland; };
@@ -35,6 +40,7 @@
             antigravity.overlays.default
             (final: prev: {
               zen-browser = zen-browser.packages.${prev.stdenv.hostPlatform.system}.default;
+              rensa = rensa.packages.${prev.stdenv.hostPlatform.system}.default;
             })
           ];
         }
