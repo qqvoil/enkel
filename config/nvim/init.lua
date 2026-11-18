@@ -79,7 +79,79 @@ local plugins = {
     config = function()
       require("colorizer").setup()
     end
-  }
+  },
+  
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "master",
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = { "markdown", "markdown_inline" },
+            highlight = { enable = true },
+        })
+    end,
+    },
+
+{
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "echasnovski/mini.icons",
+    },
+    ft = { "markdown" },
+    opts = {
+      anti_conceal = { enabled = false },
+      sign = { enabled = false },
+      heading = {
+        sign = false,
+        width = "block",
+        left_pad = 1,
+        right_pad = 2,
+        icons = { "▎ ", "▎ ", "", "", "", "" },
+      },
+      bullet = {
+        icons = { "•", "◦", "▪", "▫" },
+      },
+      code = {
+        style = "normal",
+        border = "thin",
+        left_pad = 1,
+        right_pad = 1,
+      },
+      win_options = {
+        conceallevel = { default = vim.o.conceallevel, rendered = 3 },
+        wrap = { default = false, rendered = true },
+        linebreak = { default = false, rendered = true },
+        number = { default = true, rendered = false },
+        relativenumber = { default = true, rendered = false },
+        cursorline = { default = true, rendered = false },
+      },
+    },
+    config = function(_, opts)
+      require("render-markdown").setup(opts)
+
+      -- Чёткая монохромная иерархия вместо одинаковых серых полос
+      vim.api.nvim_set_hl(0, "RenderMarkdownH1", { fg = "#ffffff", bold = true })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH1Bg", { bg = "#262626" })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH2", { fg = "#e5e5e5", bold = true })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH2Bg", { bg = "#1c1c1c" })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH3", { fg = "#cccccc", bold = true })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH4", { fg = "#a8a8a8", bold = true })
+      vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "RenderMarkdownBullet", { fg = "#808080" })
+      vim.api.nvim_set_hl(0, "RenderMarkdownCode", { bg = "#161616" })
+      vim.api.nvim_set_hl(0, "RenderMarkdownCodeInline", { fg = "#e0e0e0", bg = "#222222" })
+    end,
+    keys = {
+      {
+        "<leader>mr",
+        "<cmd>RenderMarkdown toggle<cr>",
+        desc = "Toggle Markdown Reader",
+        ft = "markdown",
+      },
+    },
+  },
 }
 
 require("lazy").setup(plugins, opts)
