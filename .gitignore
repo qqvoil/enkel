@@ -18,3 +18,7 @@ result-*
 
 # Carla auto-generated caches if any
 **/CarlaPlugins5.conf
+
+# Fish shell runtime variables
+fish_variables
+
