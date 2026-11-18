@@ -36,7 +36,8 @@
   
   environment.systemPackages = with pkgs; [
     kicad
-
+    clang
+    rustc
     traceroute
     iperf3
     antimicrox
